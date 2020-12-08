@@ -1,46 +1,46 @@
 package model;
 
-public class Score {
+public class Root {
 
-    private String userName;
+    private String nickname;
     private int score;
     private int cols;
     private int rows;
     private int mirrors;
 
-    private Score father;
-    private Score right;
-    private Score left;
+    private Root father;
+    private Root right;
+    private Root left;
 
-    public Score(String user, int s, int c, int r, int m) {
-        userName = user;
-        score = s;
-        cols = c;
+    public Root(String user, int s, int r, int c, int m) {
+        nickname = user;
+        score = s;        
         rows = r;
+        cols = c;
         mirrors = m;
     }
 
-    public Score getFather() {
+    public Root getFather() {
         return father;
     }
 
-    public void setFather(Score f) {
+    public void setFather(Root f) {
         father = f;
     }
 
-    public Score getRight() {
+    public Root getRight() {
         return right;
     }
 
-    public void setRight(Score r) {
+    public void setRight(Root r) {
         right = r;
     }
 
-    public Score getLeft() {
+    public Root getLeft() {
         return left;
     }
 
-    public void setLeft(Score l) {
+    public void setLeft(Root l) {
         left = l;
     }
 
@@ -48,8 +48,8 @@ public class Score {
         return score;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getNickname() {
+        return nickname;
     }
 
     public int getCols() {

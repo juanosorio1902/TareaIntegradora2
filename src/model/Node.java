@@ -11,6 +11,7 @@ public class Node {
 	private Node downNode;
 	private Node preNode;
 	private Node nextNode;
+	private String temp;
 	
 	
 	public Node(int r, int c) {
@@ -19,6 +20,7 @@ public class Node {
 		lMirror = false;
 		rMirror = false;
 		visMirror = false;
+		temp = "";
 		
 	}
 
@@ -101,6 +103,32 @@ public class Node {
 
 	public void setNextNode(Node nextNode) {
 		this.nextNode = nextNode;
+	}
+	public String toString() {
+		if(!temp.equals("")) {
+			String aux = "["+temp+"]";
+			temp = "";
+			return aux;
+		}
+		else if(visMirror) {
+			if(lMirror) {
+				return "[\\]";
+				
+			}
+			else {
+				return "[/]";		
+				
+			}
+		
+		}
+		else {
+			return "[ ]";
+		}
+	}
+
+
+	public void setTemp(String temp) {
+		this.temp = temp;
 	}
 
 	
